@@ -10,7 +10,9 @@ dependencies:
   dartpad_shared: any
   flutter:
     sdk: flutter
+  flutter_code_editor: ^0.3.1
   flutter_markdown: ^0.6.22
+  flutter_resizable_container: ^1.0.0
   flutter_web_plugins:
     sdk: flutter
   fluttering_phrases: ^1.0.0

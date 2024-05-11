@@ -7,7 +7,7 @@ import 'dart:async';
 import 'package:dartpad_shared/services.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_plugins/url_strategy.dart' show usePathUrlStrategy;
+//import 'package:flutter_web_plugins/url_strategy.dart' show usePathUrlStrategy;
 import 'package:go_router/go_router.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 import 'package:provider/provider.dart';
@@ -17,9 +17,10 @@ import 'package:vtable/vtable.dart';
 
 import 'console.dart';
 import 'docs.dart';
-import 'editor/editor.dart';
-import 'embed.dart';
-import 'execution/execution.dart';
+//import 'editor/editor.dart';
+import 'editor/editor_flutter.dart';
+//import 'embed.dart';
+import 'execution/execution_desktop.dart';
 import 'extensions.dart';
 import 'keys.dart' as keys;
 import 'model.dart';
@@ -33,7 +34,7 @@ const appName = 'DartPad';
 const smallScreenWidth = 720;
 
 void main() async {
-  usePathUrlStrategy();
+  //usePathUrlStrategy();
   runApp(const DartPadApp());
 }
 
@@ -275,7 +276,7 @@ class _DartPadMainPageState extends State<DartPadMainPage>
             fallbackSnippet: Samples.getDefault(type: 'dart'))
         .then((value) {
       // Start listening for inject code messages.
-      handleEmbedMessage(appModel);
+      //handleEmbedMessage(appModel);
       if (widget.runOnLoad) {
         _performCompileAndRun();
       }
